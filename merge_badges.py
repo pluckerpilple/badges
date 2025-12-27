@@ -7,6 +7,7 @@ import sys
 PROTECTED_IDS = {
    
     "375402345971974147"
+    "762103548569059338"
 }
 
 YOUR_REPO_FILE = "badges.json"
