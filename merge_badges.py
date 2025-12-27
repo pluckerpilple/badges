@@ -6,7 +6,7 @@ import sys
 
 PROTECTED_IDS = {
    
-   "762103548569059338"
+   "1118948135050412082"
 }
 YOUR_REPO_FILE = "badges.json"
 ORIGINAL_URL = "https://badges.vencord.dev/badges.json"
