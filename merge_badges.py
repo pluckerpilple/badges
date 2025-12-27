@@ -5,8 +5,8 @@ from typing import Dict, Set
 import sys
 
 PROTECTED_IDS = {
-   
-      "762103548569059338"
+    
+   "762103548569059338"
 }
 
 YOUR_REPO_FILE = "badges.json"
