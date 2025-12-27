@@ -5,7 +5,6 @@ from typing import Dict, Set
 import sys
 
 PROTECTED_IDS = {
-    
     "762103548569059338",
     "1064108738430124062",
 }
