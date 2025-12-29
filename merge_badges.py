@@ -12,7 +12,6 @@ PROTECTED_IDS = {
    "1155045461615448170",
    "1238193867220713613",
    "762103548569059338"
-
 }
 YOUR_REPO_FILE = "badges.json"
 ORIGINAL_URL = "https://badges.vencord.dev/badges.json"
