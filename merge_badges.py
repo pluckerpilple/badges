@@ -35,29 +35,15 @@ def download_original(url: str) -> Dict:
 
 def smart_merge(your_data: Dict, original_data: Dict, protected_ids: Set[str]) -> Dict:
     merged = {}
-
-    all_ids = set(original_data.keys()) | set(your_data.keys()) | set(protected_ids)
-
-    FORCED_BADGE = [
-        {
-            "tooltip": "Custom Badge",
-            "badge": "https://raw.githubusercontent.com/Vendicated/Vencord/main/assets/logo.png"
-        }
-    ]
-
-    for user_id in all_ids:
-        if user_id in protected_ids:
-            if user_id in your_data:
-                merged[user_id] = your_data[user_id]
-            elif user_id in original_data:
-                merged[user_id] = original_data[user_id]
-            else:
-                # 🔥 إجبار الشارة حتى لو ما عنده شي
-                merged[user_id] = FORCED_BADGE
-        else:
-            if user_id in original_data:
-                merged[user_id] = original_data[user_id]
-
+    
+    for user_id in protected_ids:
+        if user_id in your_data:
+            merged[user_id] = your_data[user_id]
+    
+    for user_id, badges in original_data.items():
+        if user_id not in protected_ids:
+            merged[user_id] = badges
+    
     return merged
 
 def save_file(data: Dict, filepath: str):
