@@ -35,15 +35,22 @@ def download_original(url: str) -> Dict:
 
 def smart_merge(your_data: Dict, original_data: Dict, protected_ids: Set[str]) -> Dict:
     merged = {}
-    
-    for user_id in protected_ids:
-        if user_id in your_data:
-            merged[user_id] = your_data[user_id]
-    
-    for user_id, badges in original_data.items():
-        if user_id not in protected_ids:
-            merged[user_id] = badges
-    
+
+    all_ids = set(original_data.keys()) | set(your_data.keys())
+
+    for user_id in all_ids:
+        if user_id in protected_ids:
+            # إذا عندك شارة مخصصة خذها
+            if user_id in your_data:
+                merged[user_id] = your_data[user_id]
+            # غير كذا رجّع الشارة الرسمية
+            elif user_id in original_data:
+                merged[user_id] = original_data[user_id]
+        else:
+            # غير محمي → خذ الرسمي
+            if user_id in original_data:
+                merged[user_id] = original_data[user_id]
+
     return merged
 
 def save_file(data: Dict, filepath: str):
