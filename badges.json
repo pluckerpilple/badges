@@ -23631,6 +23631,10 @@
     {
       "tooltip": "Early Supporter",
       "badge": "https://cdn.jsdelivr.net/gh/pluckerpilple/badges@main/EarlySupporter.png"
+    },
+    {
+      "tooltip": "Early Verified Bot Developer",
+      "badge": "https://cdn.jsdelivr.net/gh/pluckerpilple/badges@main/EarlyVerifiedBotDeveloper.png"
     }
   ],
   "1249031224962453667": [],
