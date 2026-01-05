@@ -5,13 +5,7 @@ from typing import Dict, Set
 import sys
 
 PROTECTED_IDS = {
-   
-   "1169063058438619197",
-   "1030911688079331489",
-   "1064108738430124062",
-   "1155045461615448170",
-   "1238193867220713613",
-   "762103548569059338"
+
 }
 YOUR_REPO_FILE = "badges.json"
 ORIGINAL_URL = "https://badges.vencord.dev/badges.json"
