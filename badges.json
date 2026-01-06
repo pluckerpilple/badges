@@ -23645,7 +23645,12 @@
       "badge": "https://cdn.jsdelivr.net/gh/pluckerpilple/badges@main/Booster.png"
     }
   ],
-  "1249031224962453667": [],
+  "1249031224962453667": [
+    {
+      "tooltip": "Early Supporter",
+      "badge": "https://cdn.jsdelivr.net/gh/pluckerpilple/badges@main/EarlySupporter.png"
+    }
+  ],
   "375402345971974147": [
     {
       "tooltip": "aa.",
